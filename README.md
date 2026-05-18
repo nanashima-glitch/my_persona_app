@@ -1,16 +1,19 @@
-# my_persona_app
+# Persona 5 風 カットインジェネレーター（個人開発）
 
-A new Flutter project.
+自分が好きなゲーム『ペルソナ5』のスタイリッシュなUI・エフェクトを再現したくて、Flutterを用いた個人開発に挑戦したプロジェクトです。
+ユーザーが選んだ写真を切り抜きペルソナ風のカットインにするアプリを目指していました。
+ios,android両方でリリースしようとしたためflutterを使用
 
-## Getting Started
+結果としてうまくいかず
+失敗理由としてクロマキー透過がうまくいかず
+ペルソナのカットインは一番前にカットインの枠　次にキャラクターの顔　次に真っ赤な背景というものです。
 
-This project is a starting point for a Flutter application.
+枠外と枠内がともに赤の背景のため動画などでクロマキー透過をおこなってしまうと背景が透明で残念なカットインになってしまう。
+ffmpegやプログラムなどで透過処理を行おうとしたがうまくいかず…
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ 技術スタック
+- フロントエンド: Flutter (Dart)
+- バックエンド / 画像処理: Python
+- 外部ツール: ComfyUI (API連携検証)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
